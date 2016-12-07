@@ -48,7 +48,7 @@ export default class MainBoard extends Component {
   }
   startGame=()=>{
 	  var _this = this;
-	  this.gameThread = setInterval(function(){_this.walk();}, 400);
+	  this.gameThread = setInterval(function(){_this.walk();}, 200);
   }
   stopGame=()=>{
 	  clearInterval(this.gameThread); 
@@ -58,7 +58,18 @@ export default class MainBoard extends Component {
   }
   setDirection(){
 	  var key = arguments[0].keyIdentifier;
-	  this.direction = key.toLowerCase();
+	  var direction = key.toLowerCase();
+	  if(this.isValid(direction))
+		  this.direction = direction;
+	  else
+		  console.log("invalid direction...........");
+  }
+  isValid(direction){
+	  var obj={
+			  left:'right',up:'down',down:'up',right:'left'
+	  }
+	  
+	  return !(this.direction == obj[direction]);
   }
   walk(){
 	  
