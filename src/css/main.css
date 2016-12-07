@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+.cell{
+	text-align: center;
+	border:solid 1px #b8b8b8;
+}
+.cell:hover{
+	background-color: cyan;
+}
+.sel{
+	background-color: red !important;
+}
+.point{
+	background-color:green;
+}
+.control-menu{
+	width:500px;
+	margin:20px auto;
+	
+}
