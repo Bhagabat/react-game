@@ -3,6 +3,8 @@
 	text-align: center;
 	border:solid 1px #b8b8b8;
 	transition: all .5s;
+	height:30px;
+	line-height:30px;
 }
 .cell:hover{
 	background-color: cyan;

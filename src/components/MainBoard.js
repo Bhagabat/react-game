@@ -35,7 +35,7 @@ export default class MainBoard extends Component {
 				
 				tempCells.push((<Cell key={value} point={randoms.indexOf(value) >-1?1:0} ref={"cell-"+value} value={value} left={left} right={right} up={top} down={bottom}/>))
 		  }
-		  cells.push((<div key={"vRow-"+i} style={{width:60,float:'left'}}>{tempCells}</div>));
+		  cells.push((<div key={"vRow-"+i} style={{width:40,float:'left'}}>{tempCells}</div>));
 	  }
 	 
 	  return cells;
